@@ -1,0 +1,7 @@
+@for (area of parsedAreas; track area.id) {
+  <app-area [area]="area">
+    @for (thingGroup of area.thingGroups; track thingGroup.id) {
+      <app-thing-group [thingGroup]="thingGroup" />
+    }
+  </app-area>
+}
