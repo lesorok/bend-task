@@ -1,0 +1,15 @@
+@if (isConnected) {
+  <div class="thing__connection"></div>
+}
+
+<div class="thing">
+  <div class="thing__status" [ngClass]="color"></div>
+
+  <div class="thing__sku">
+    {{ thing.sku }}
+  </div>
+
+  <div class="thing__default-sku">
+    {{ thing.defaultSku }}
+  </div>
+</div>

@@ -1,0 +1,10 @@
+@for (thing of thingGroup.things; track thing.id; let first = $first) {
+  @if (first) {
+    <app-thing-card
+      [thing]="thing"
+      [color]="thingGroup.things | getColorFromStatuses"
+    />
+  } @else {
+    <app-thing-card isConnected [thing]="thing" />
+  }
+}

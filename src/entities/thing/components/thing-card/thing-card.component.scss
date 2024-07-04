@@ -1,0 +1,62 @@
+$card-background: #2b4e87;
+$connection-background: #203d74;
+$height: 100px;
+$width: 170px;
+$yellow: #f4e700;
+$red: #f64d25;
+$orange: #ff9800;
+
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.yellow {
+  background-color: $yellow;
+}
+
+.red {
+  background-color: $red;
+}
+
+.orange {
+  background-color: $orange;
+}
+
+.thing {
+  display: flex;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  width: $width;
+  height: $height;
+  align-items: center;
+  justify-content: center;
+  background-color: $card-background;
+
+  &__connection {
+    background-color: $connection-background;
+    height: $height - 25px;
+    width: 12px;
+  }
+
+  &__sku {
+    font-size: 30px;
+  }
+
+  &__default-sku {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+  }
+
+  &__status {
+    position: absolute;
+    width: 22px;
+    border-radius: 8px;
+    left: -16px;
+    height: $height - 20px;
+  }
+}
